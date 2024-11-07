@@ -8,12 +8,10 @@ sudo useradd --system --no-create-home --shell /usr/sbin/nologin -g exporter_gro
 sudo mkdir -p /etc/exporters
 
 # Exporters 다운로드
-wget https://github.com/prometheus/mysqld_exporter/releases/download/v0.14.0/mysqld_exporter-0.14.0.linux-amd64.tar.gz
 wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
 wget https://github.com/Lusitaniae/apache_exporter/releases/download/v0.11.0/apache_exporter-0.11.0.linux-amd64.tar.gz
 
 # Exporters 압축 해제
-tar xf mysqld_exporter-0.14.0.linux-amd64.tar.gz
 tar xf node_exporter-1.3.1.linux-amd64.tar.gz
 tar xf apache_exporter-0.11.0.linux-amd64.tar.gz
 
@@ -21,7 +19,6 @@ tar xf apache_exporter-0.11.0.linux-amd64.tar.gz
 rm -f *.tar.gz
 
 # 디렉토리 이동
-sudo mv mysqld_exporter-0.14.0.linux-amd64 /etc/exporters/mysqld_exporter
 sudo mv node_exporter-1.3.1.linux-amd64 /etc/exporters/node_exporter
 sudo mv apache_exporter-0.11.0.linux-amd64 /etc/exporters/apache_exporter
 
